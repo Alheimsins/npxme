@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "npxme",
+  "alias": [
+    "npxme.now.sh"
+  ],
+  "builds": [
+    { "src": "/index.js", "use": "@now/node"}
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" }
+  ]
+}
