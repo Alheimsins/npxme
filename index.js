@@ -5,6 +5,7 @@ const Router = require('router')
 const finalhandler = require('finalhandler')
 const cors = require('cors')
 const axios = require('axios')
+const repackData = require('./lib/repack-data')
 
 // Initialize a new router
 const router = Router()
@@ -24,7 +25,7 @@ const getCard = async (request, response) => {
   try {
     const { data } = await axios.get(url)
     response.setHeader('Content-Type', 'text/plain; charset=utf-8')
-    send(response, 200, data)
+    send(response, 200, repackData(data))
   } catch (error) {
     console.error(error)
     send(response, 404, `Could not find card for ${card}`)
