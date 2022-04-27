@@ -48,7 +48,7 @@
     "test-listen": "1.1.0"
   },
   "dependencies": {
-    "axios": "0.26.1",
+    "axios": "0.27.2",
     "cors": "2.8.5",
     "finalhandler": "1.1.2",
     "markdown-it": "13.0.0",
